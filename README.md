@@ -55,7 +55,10 @@ sequenceDiagram
 ├── Clarinet.toml         # Clarinet configuration (Clarity 2, Epoch 2.4)
 ├── contracts/
 │   └── indexer-registry.clar   # Core Stacks Smart Contract
-├── src/
+├── frontend/
+│   ├── index.html        # Interactive dashboard interface
+│   ├── index.css         # Dashboard styling (dark mode violet theme)
+│   ├── app.js            # Wallet connection & dashboard simulation logic
 │   └── indexer-node.ts   # Node client script for listening/answering queries
 ├── tests/
 │   └── indexer-registry.test.ts  # Vitest unit tests
@@ -107,7 +110,7 @@ Expected output:
 
 You can run the mock indexer node daemon which shows transaction construction with Stacks JS SDK:
 ```bash
-npx ts-node src/indexer-node.ts
+npx ts-node frontend/indexer-node.ts
 ```
 
 ---
